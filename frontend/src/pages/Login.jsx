@@ -31,8 +31,8 @@ export default function Login() {
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-primary text-white shuriken-spin">
               <ShieldCheck className="h-7 w-7" />
             </div>
-            <h1 className="mt-5 text-3xl font-extrabold text-slate-950 ninja-fade" style={{ animationDelay: '0.2s', opacity: 0 }}>Ninja Inventory</h1>
-            <p className="mt-3 text-sm leading-6 text-slate-600 ninja-fade" style={{ animationDelay: '0.3s', opacity: 0 }}>
+            <h1 className="mt-5 text-3xl font-extrabold text-slate-950 ninja-fade" style={{ animationDelay: '0.2s' }}>Ninja Inventory</h1>
+            <p className="mt-3 text-sm leading-6 text-slate-600 ninja-fade" style={{ animationDelay: '0.3s' }}>
               Choose an admin or superadmin account to continue.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function Login() {
             ))}
           </div>
 
-          <form onSubmit={submitLogin} className="mx-auto mt-8 max-w-md space-y-3 ninja-fade" style={{ animationDelay: '0.8s', opacity: 0 }}>
+          <form onSubmit={submitLogin} className="mx-auto mt-8 max-w-md space-y-3 ninja-fade" style={{ animationDelay: '0.8s' }}>
             <label className="block space-y-1.5">
               <span className="label">Password</span>
               <input
