@@ -29,20 +29,20 @@ export default function Login() {
       <main className="mx-auto flex min-h-[calc(100vh-4rem)] items-center justify-center">
         <div className="login-split-layout">
           {/* Form Side */}
-          <div className="login-form-side">
+          <div className="login-form-side ninja-fade">
             <section className="w-full rounded-lg border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
               <div className="mx-auto max-w-2xl text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-primary text-white">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-md bg-primary text-white shuriken-spin">
                   <ShieldCheck className="h-7 w-7" />
                 </div>
-                <h1 className="mt-5 text-3xl font-extrabold text-slate-950">Ninja Fiber Inventory</h1>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+                <h1 className="mt-5 text-3xl font-extrabold text-slate-950 ninja-fade" style={{ animationDelay: '0.2s', opacity: 0 }}>Ninja Inventory</h1>
+                <p className="mt-3 text-sm leading-6 text-slate-600 ninja-fade" style={{ animationDelay: '0.3s', opacity: 0 }}>
                   Choose an admin or superadmin account to continue.
                 </p>
               </div>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                {accounts.map((item) => (
+                {accounts.map((item, index) => (
                   <button
                     key={item.id}
                     type="button"
@@ -50,9 +50,10 @@ export default function Login() {
                       setSelectedAccountId(item.id);
                       setError("");
                     }}
-                    className={`rounded-lg border bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-teal hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-teal/30 ${
+                    className={`ninja-slice rounded-lg border bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-teal hover:shadow-soft focus:outline-none focus:ring-2 focus:ring-teal/30 ${
                       selectedAccountId === item.id ? "border-teal ring-2 ring-teal/20" : "border-slate-200"
                     }`}
+                    style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-md bg-teal/10 text-teal">
                       {item.role === "superadmin" ? <Crown className="h-6 w-6" /> : <UserRoundCheck className="h-6 w-6" />}
@@ -63,7 +64,7 @@ export default function Login() {
                 ))}
               </div>
 
-              <form onSubmit={submitLogin} className="mx-auto mt-8 max-w-md space-y-3">
+              <form onSubmit={submitLogin} className="mx-auto mt-8 max-w-md space-y-3 ninja-fade" style={{ animationDelay: '0.8s', opacity: 0 }}>
                 <label className="block space-y-1.5">
                   <span className="label">Password</span>
                   <input
@@ -86,7 +87,7 @@ export default function Login() {
           </div>
 
           {/* Phone Mockup Side */}
-          <div className="login-phone-side">
+          <div className="login-phone-side ninja-fade" style={{ animationDelay: '0.6s', opacity: 0 }}>
             <PhoneMockup />
           </div>
         </div>

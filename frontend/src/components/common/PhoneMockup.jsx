@@ -107,7 +107,7 @@ function PhoneScreen() {
           NF
         </div>
         <div>
-          <p style={{ fontSize: 8, fontWeight: 800, color: "#0f172a", margin: 0 }}>Ninja Fiber</p>
+          <p style={{ fontSize: 8, fontWeight: 800, color: "#0f172a", margin: 0 }}>Ninja</p>
           <p style={{ fontSize: 6, color: "#64748b", margin: 0 }}>Inventory</p>
         </div>
         <div style={{ marginLeft: "auto", display: "flex", gap: 4 }}>

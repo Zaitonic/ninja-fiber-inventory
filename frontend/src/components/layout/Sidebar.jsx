@@ -33,7 +33,7 @@ export default function Sidebar({ isOpen, onClose }) {
             NF
           </div>
           <div>
-            <p className="text-sm font-extrabold text-slate-950">Ninja Fiber</p>
+            <p className="text-sm font-extrabold text-slate-950">Ninja Inventory</p>
             <p className="text-xs font-medium text-slate-500">Inventory Management</p>
           </div>
         </div>

@@ -49,6 +49,37 @@
   .label {
     @apply text-xs font-semibold uppercase tracking-wide text-slate-500;
   }
+
+  /* Ninja Animations */
+  .ninja-fade {
+    animation: ninjaFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .ninja-slice {
+    opacity: 0;
+    transform: translateX(-30px) skewX(10deg);
+    animation: ninjaSlice 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  .shuriken-spin {
+    animation: shurikenSpin 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@keyframes ninjaFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ninjaSlice {
+  0% { opacity: 0; transform: translateX(-30px) skewX(20deg); }
+  100% { opacity: 1; transform: translateX(0) skewX(0deg); }
+}
+
+@keyframes shurikenSpin {
+  0% { transform: rotate(0deg) scale(0.5); opacity: 0; }
+  60% { transform: rotate(720deg) scale(1.2); opacity: 1; }
+  100% { transform: rotate(1080deg) scale(1); opacity: 1; }
 }
 
 /* ─── Phone Mockup 3D Perspective ─── */
